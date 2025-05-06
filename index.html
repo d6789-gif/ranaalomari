@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>إنفنتي للساعات الفاخرة</title>
+  <style>
+    body {
+      font-family: 'Tahoma', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #fefae0, #f5ebe0);
+      color: #333;
+    }
+    header, footer {
+      background-color: #4b3832;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #7f4f24;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 15px;
+      font-weight: bold;
+      padding: 10px 20px;
+      background-color: #dda15e;
+      border-radius: 5px;
+    }
+    .section {
+      padding: 40px 20px;
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    .hero img {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .circle-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .circle {
+      width: 150px;
+      height: 150px;
+      background-color: #fff;
+      border: 3px solid #dda15e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .circle:hover {
+      transform: scale(1.05);
+      background-color: #fefae0;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+    }
+    .gallery-item {
+      text-align: center;
+    }
+    .gallery img {
+      width: 150px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    .gallery p {
+      margin-top: 8px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>شركة إنفنتي للساعات الفاخرة</h1>
+  <p>الفخامة تبدأ من هنا</p>
+</header>
+
+<nav>
+  <a href="#" onclick="showSection('home')">الرئيسية</a>
+  <a href="#" onclick="showSection('products')">منتجاتنا</a>
+  <a href="#" onclick="showSection('about')">من نحن</a>
+  <a href="#" onclick="showSection('contact')">اتصل بنا</a>
+</nav>
+
+<section id="home" class="section active hero">
+  <img src="https://images.unsplash.com/photo-1598300054644-e44c57976c13" alt="ساعات فاخرة">
+  <h2>تعرف على ساعات إنفنتي</h2>
+  <p>ساعات مصممة بأعلى معايير الجودة والتقنية، مزيج مثالي بين الأناقة والدقة.</p>
+</section>
+
+<section id="products" class="section">
+  <h2>منتجاتنا</h2>
+  <div class="circle-container">
+    <div class="circle" onclick="showGallery('men')">ساعات رجالية</div>
+    <div class="circle" onclick="showGallery('women')">ساعات نسائية</div>
+    <div class="circle" onclick="showGallery('kids')">ساعات أطفال</div>
+    <div class="circle" onclick="showGallery('daily')">استخدام يومي</div>
+    <div class="circle" onclick="showGallery('events')">ساعات مناسبات</div>
+    <div class="circle" onclick="showGallery('sport')">ساعات رياضية</div>
+  </div>
+</section>
+
+<section id="gallery" class="section">
+  <h2>معرض الساعات</h2>
+
+  <!-- ساعات رجالية -->
+  <div id="gallery-men" class="gallery-category">
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="c:\Users\duhaa\OneDrive\Desktop\ساعه.jpg" alt="رجالي 1">
+        <p>ساعة رجالية كلاسيكية</p>
+      </div>
+      <div class="gallery-item">
+        <img src="c:\Users\duhaa\OneDrive\Desktop\000.jpeg" alt="رجالي 2">
+        <p>ساعة جلدية سوداء</p>
+      </div>
+      <div class="gallery-item">
+        <img src="c:\Users\duhaa\OneDrive\Desktop\تنزيل.jpeg" alt="رجالي 3">
+        <p>ساعة ستانلس ستيل</p>
+      </div>
+      <div class="gallery-item">
+        <img src="c:\Users\duhaa\OneDrive\Desktop\---.jpeg" alt="رجالي 4">
+        <p>تصميم فاخر للرجال</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- نسائية -->
+  <div id="gallery-women" class="gallery-category" style="display:none;">
+    <div class="gallery">
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\sss.jpeg" alt="نسائي 1"><p>ساعة نسائية راقية</p></div>
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\666.webp" alt="نسائي 2"><p>ساعة ذهبية للنساء</p></div>
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\----.jpeg" alt="نسائي 3"><p>تصميم ناعم وأنيق</p></div>
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\bb5ca7da-02fb-4594-9c72-1588dff63b1b.jpeg" alt="نسائي 4"><p>ساعة باللون الوردي</p></div>
+    </div>
+  </div>
+
+  <!-- أطفال -->
+  <div id="gallery-kids" class="gallery-category" style="display:none;">
+    <div class="gallery">
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\2.jpeg" alt="أطفال 1"><p>ساعة أطفال ملونة</p></div>
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\4.jpeg" alt="أطفال 2"><p>ساعة مرحة للأطفال</p></div>
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\3.jpeg" alt="أطفال 3"><p>ساعة تعليمية</p></div>
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\1.jpeg" alt="أطفال 4"><p>ساعة للأطفال الصغار</p></div>
+    </div>
+  </div>
+
+  <!-- يومي -->
+  <div id="gallery-daily" class="gallery-category" style="display:none;">
+    <div class="gallery">
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\beach day.jpeg" alt="يومي 1"><p>ساعة مناسبة ليوم على الشاطئ</p></div>
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\day.jpeg" alt="يومي 2"><p>ساعة للاستخدام اليومي</p></div>
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\day (2).jpeg" alt="يومي 3"><p>ساعة خفيفة وعملية</p></div>
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\day (3).jpeg" alt="يومي 4"><p>ساعة عصرية للاستخدام اليومي</p></div>
+    </div>
+  </div>
+
+  <!-- رياضية -->
+  <div id="gallery-sport" class="gallery-category" style="display:none;">
+    <div class="gallery">
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\⌚ اختر ساعة تعكس شخصيتك القوية، وتمنحك لمسة من….jpeg" alt="رياضية 1"><p>ساعة رياضية قوية</p></div>
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\Reloj de cuarzo con fecha de acero inoxidable de….jpeg" alt="رياضية 2"><p>ساعة مقاومة للماء</p></div>
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\Reloj Masculino WWOOR, reloj dorado, relojes….jpeg" alt="رياضية 3"><p>ساعة ذهبية رياضية</p></div>
+      <div class="gallery-item"><img src="c:\Users\duhaa\OneDrive\Desktop\Set de 2 relojes de pulsera de hombre de cuarzo….jpeg" alt="رياضية 4"><p>طقم ساعات للرياضة</p></div>
+    </div>
+  </div>
+
+</section>
+
+<section id="about" class="section">
+  <h2>من نحن</h2>
+  <p>شركة إنفنتي تايم - شركة ساعات عالمية</p>
+  <p>مرحبًا بك في عالم الدقة والأناقة!<br>
+  نحن في إنفنتي تايم نسعد بانضمامك إلينا، حيث نجمع بين الحرفية العالية والتصميم العصري لنقدم لك ساعات تعكس ذوقك الرفيع وتواكب أسلوب حياتك.<br>
+  تصفّح مجموعتنا المختارة واكتشف ما يجعل كل لحظة تستحق أن تُخلّد.</p>
+  <p>للتواصل: 1234-567-009</p>
+</section>
+
+<section id="contact" class="section">
+  <h2>اتصل بنا</h2>
+  <p>البريد الإلكتروني: info@infinitywatches.com</p>
+  <p>رقم الهاتف: 1234-567-009</p>
+</section>
+
+<footer>
+  <p>جميع الحقوق محفوظة © 2025 - شركة إنفنتي للساعات الفاخرة</p>
+</footer>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+  }
+
+  function showGallery(category = '') {
+    showSection('gallery');
+    document.querySelectorAll('.gallery-category').forEach(cat => cat.style.display = 'none');
+    if (category) {
+      const selected = document.getElementById('gallery-' + category);
+      if (selected) selected.style.display = 'block';
+    }
+  }
+</script>
+
+</body>
+</html>
